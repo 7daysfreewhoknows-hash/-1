@@ -142,5 +142,11 @@ namespace WebApplication1.Services
                 Lessons = new List<LessonDto>()
             };
         }
+        public async Task<List<string>> GetAllGroupsAsync()
+        {
+            return await _db.StudentGroups
+                .Select(g => g.GroupName)
+                .ToListAsync();
+        }
     }
 }

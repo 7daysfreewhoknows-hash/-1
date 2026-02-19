@@ -4,7 +4,7 @@ namespace WebApplication1.Services
 {
     public interface IScheduleService
     {
-        Task<List<ScheduleByDateDto>> GetScheduleForGroup(string groupName, DateTime
-startDate, DateTime endDate);
+        Task<List<ScheduleByDateDto>> GetScheduleForGroup(string groupName, DateTime startDate, DateTime endDate);
+        Task<List<string>> GetAllGroupsAsync();
     }
 }

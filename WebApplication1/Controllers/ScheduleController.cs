@@ -22,5 +22,11 @@ namespace WebApplication1.Controllers
             // Возвращаем результат со статусом 200 OK
             return Ok(result);
         }
+        [HttpGet("groups")]
+        public async Task<ActionResult<List<string>>> GetGroups()
+        {
+            var groups = await _service.GetAllGroupsAsync();
+            return Ok(groups);
+        }
     }
 }
